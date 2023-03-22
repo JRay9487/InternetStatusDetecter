@@ -1,25 +1,27 @@
 # -*- coding: UTF-8 -*-
 
+#import
 import os 
 import subprocess
 import datetime
 
 #Variable
-web_adr = str(input("Web address or IP(by default is www.google.com): "))
-if web_adr == "":
-    web_adr = "www.google.com"
+packet_amount = ""
+packet_size = ""
+str_amount = ""
+web_adr = ""
+    
+#input
+def inputvalue(var, text, default):
+    var = str(input(text))
+    if var == "":
+        var = default
+    return var
 
-packet_amount = str(input("Packet amount(by default is 1000 packets): "))
-if packet_amount == "":
-    packet_amount = str(1000)
-
-packet_size  = str(input("Packet size(by default is 32 bytes): "))
-if packet_size  == "":
-    packet_size  = str(32)
-
-str_amount  = str(input("Stress System(by default is 0): "))
-if str_amount  == "":
-    str_amount  = str(0)
+packet_amount = inputvalue(packet_amount,"Packet amount(by default is 1000 packets): ","1000")
+packet_size = inputvalue(packet_size,"Packet size(by default is 32 bytes): ","32")
+str_amount = inputvalue(str_amount,"Stress System(by default is 0): ","0")
+web_adr = inputvalue(web_adr,"Web address or IP(by default is www.google.com): ","www.google.com")
 
 #Date
 date = datetime.datetime.now()
