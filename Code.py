@@ -20,7 +20,7 @@ def inputvalue(var, text, default):
 
 packet_amount = inputvalue(packet_amount,"Packet amount(by default is 1000 packets): ","1000")
 packet_size = inputvalue(packet_size,"Packet size(by default is 32 bytes): ","32")
-str_amount = inputvalue(str_amount,"Stress System(by default is 0): ","0")
+str_amount = inputvalue(str_amount,"Stress System(by default is 0):!!!NOT YET DEVELOP!!!! ","0")
 web_adr = inputvalue(web_adr,"Web address or IP(by default is www.google.com): ","www.google.com")
 
 #Date
